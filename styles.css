@@ -1,0 +1,17 @@
+body {
+    background-color: cornflowerblue;
+}
+
+.navbar-purworejo {
+    font-family: Helvetica;
+}
+
+.sub-tit-pur {
+    margin-top: -4%;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: 100px;
+}
