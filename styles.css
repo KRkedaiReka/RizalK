@@ -4,12 +4,25 @@ body {
     line-height: 22.5px;
     font-weight: 300;
     color: #666;}
+.head-bar {
+    background-color: midnightblue;
+    
+}
 .navbar-purworejo {
-    background-color: cornflowerblue;
-    box-sizing: border-box;
     color: black;}
+    
+/* .head-list {
+    position: right;
+} */
+
+.head-list li {
+    float: left;
+    padding: 10px;
+}
 .head-right {
-    align-self: center;}
+    background-color: royalblue;
+}
+
 h1, h2 {
     margin-left: auto;}
 .sub-tit-pur {
@@ -26,6 +39,12 @@ h1, h2 {
     position: relative;
     width: 100%;
     overflow: hidden;}
+
+.running {
+    background-color: royalblue;
+    font-style: inherit;
+    color: white;
+}
 
     /* Dropdown Button */
 .dropbtn {
@@ -50,6 +69,7 @@ h1, h2 {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    opacity: 90%;
   }
   
   /* Links inside the dropdown */
@@ -58,6 +78,7 @@ h1, h2 {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    position: absolute;
   }
   
   /* Change color of dropdown links on hover */
@@ -66,5 +87,110 @@ h1, h2 {
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
 
-  
+  /*Cursoel*/
+label {
+	background: #444;
+	color: #fff;
+	transition: transform 400ms ease-out;
+	display: inline-block;
+    min-height: 100%;
+	width: 100vw;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+form {
+	position: relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	white-space: nowrap;
+}
+input {
+	position: absolute;
+}
+
+.keys {
+	position: absolute;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	color: #fff;
+	text-align: center;
+	transition: all 300ms linear;
+	opacity: 0;
+}
+
+input:focus ~ .keys {
+	opacity: 0.8;
+}
+
+input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+input:nth-of-type(2):checked ~ label:nth-of-type(2),
+input:nth-of-type(3):checked ~ label:nth-of-type(3),
+input:nth-of-type(4):checked ~ label:nth-of-type(4){
+   z-index: 0;
+}
+
+input:nth-of-type(1):checked ~ label {
+	transform: translate3d(0, 0, 0);
+}
+
+input:nth-of-type(2):checked ~ label {
+	transform: translate3d(-100%, 0, 0);
+}
+
+input:nth-of-type(3):checked ~ label {
+	transform: translate3d(-200%, 0, 0);
+}
+
+input:nth-of-type(4):checked ~ label {
+	transform: translate3d(-300%, 0, 0);
+}
+
+label {
+	background: #444;
+	background-size: cover;
+	font-size: 3rem;
+}
+
+label:before,
+label:after {
+	color: white;
+	display: block;
+	background: rgba(255,255,255,0.2);
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	vertical-align: middle;
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+}
+
+label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+object {
+
+}
+
+
   
